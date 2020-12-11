@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [UPS CrossBrowserTest Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="tests" name="ChromeBrowser(failed)">
+    <parameter name="browser" value="ChromeBrowser"/>
+    <classes>
+      <class name="com.ups.testRunner.UpsLoginTestRunner">
+        <methods>
+          <include name="driverInitialize"/>
+          <include name="forgotlogin"/>
+          <include name="afterMethod"/>
+          <include name="login"/>
+        </methods>
+      </class> <!-- com.ups.testRunner.UpsLoginTestRunner -->
+    </classes>
+  </test> <!-- ChromeBrowser(failed) -->
+</suite> <!-- Failed suite [UPS CrossBrowserTest Suite] -->
