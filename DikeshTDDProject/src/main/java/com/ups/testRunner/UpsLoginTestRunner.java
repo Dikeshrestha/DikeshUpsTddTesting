@@ -35,7 +35,7 @@ public class UpsLoginTestRunner extends UpsDrivers {
 		loginTest.clickcookieBanner();
 		loginTest.clicksignuploginBtn();
 		Thread.sleep(1000);
-
+//
 		loginTest.enterUserId(); // Thread.sleep(5000);
 		loginTest.enterPassword();
 		loginTest.clickLogin();
