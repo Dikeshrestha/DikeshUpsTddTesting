@@ -78,4 +78,5 @@ public class UpsShippingPageElements {
 		WebElement msg = driver.findElement(By.className("ups-icons-error ng-star-inserted"));
 		return msg;
 	}
+	
 }

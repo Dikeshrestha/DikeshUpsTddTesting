@@ -24,8 +24,7 @@ public class UpsLoginTestRunner extends UpsDrivers {
 			this.driver = getFirefoxDriver();
 		}
 		this.loginTest = new UpsLoginPageActions(driver);
-		driver.get(
-				"https://www.ups.com/lasso/login?loc=en_US&returnto=https%3A%2F%2Fwww.ups.com%2Fus%2Fen%2FHome.page");
+		driver.get("https://www.ups.com/us/en/Home.page");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 	}
@@ -34,14 +33,14 @@ public class UpsLoginTestRunner extends UpsDrivers {
 	void login() throws InterruptedException {
 		Thread.sleep(1000);
 		loginTest.clickcookieBanner();
-		// loginTest.clicksignuploginBtn();
+		loginTest.clicksignuploginBtn();
 		Thread.sleep(1000);
 
 		loginTest.enterUserId(); // Thread.sleep(5000);
 		loginTest.enterPassword();
 		loginTest.clickLogin();
 
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		Boolean errorMsg;
 		errorMsg = loginTest.getloginErrorMsg();
 
